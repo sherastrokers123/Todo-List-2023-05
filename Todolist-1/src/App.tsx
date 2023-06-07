@@ -11,12 +11,25 @@ function App() {
         { id: 4, title: "Redux", isDone: false },
     ]
 
-
+    function removeTask(id: number) {
+        tasks1 = tasks1.filter((t) => {
+            if (t.id !== id) {
+                return true
+            } else {
+                return false
+            }
+        })
+        console.log(tasks1);
+    }
 
     return (
 
         <div className="App">
-            <Todolist title="What to learn?" tasks={tasks1} />
+            <Todolist
+                title="What to learn?"
+                tasks={tasks1}
+                removeTask={removeTask}
+            />
         </div>
     );
 }
