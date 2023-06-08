@@ -2,37 +2,20 @@ import React from 'react';
 import './App.css';
 import { Todolist } from './Components/Todolist';
 
+let task1 = [
+    { id: 1, title: "css", isDone: true },
+    { id: 2, title: "js", isDone: false },
+    { id: 3, title: "html", isDone: true },
+    { id: 4, title: "angular", isDone: false },
+]
+
+
 function App() {
-
-    let tasks1 = [
-        { id: 1, title: "CSS", isDone: true },
-        { id: 2, title: "JS", isDone: true },
-        { id: 3, title: "React", isDone: false },
-        { id: 4, title: "Redux", isDone: false },
-    ]
-
-    function removeTask(id: number) {
-        tasks1 = tasks1.filter((t) => {
-            if (t.id !== id) {
-                return true
-            } else {
-                return false
-            }
-        })
-        console.log(tasks1);
-    }
-
     return (
-
         <div className="App">
-            <Todolist
-                title="What to learn?"
-                tasks={tasks1}
-                removeTask={removeTask}
-            />
-        </div>
+            <Todolist title='React' task={task1} />
+        </div >
     );
 }
-
 
 export default App;
