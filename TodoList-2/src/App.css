@@ -1,19 +1,26 @@
 .App {
   padding: 30px;
   display: flex;
+  
+}
+.App div{
+  padding: 40px;
+  background: #c7c7c739;
+  border-radius: 30px;
 }
 
 body{
-background: linear-gradient(90deg, #000000d9 ,#5a00a8, #000000, #007b8e, #000000, #ce6304,#0000006d);
+background: linear-gradient(10deg, #000000d9 , #000000, #00a4be, #000000,#e0340096,#007a2f6d);
 color: #fff;
 height: 100vh;
-animation: gradient 24s linear  infinite;
-background-size:500% 500%;
+animation: gradient 20s linear infinite;
+background-size:800% 800%;
 }
 
 @keyframes gradient {
+  
 	0% {
-		background-position: 0% 50%;
+		background-position: 0% 50% ;
 	}
 	50% {
 		background-position: 100% 50%;
