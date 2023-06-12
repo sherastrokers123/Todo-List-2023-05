@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Todolist } from './Components/Todolist';
 
-let task1 = [
+let task = [
     { id: 1, title: "css", isDone: true },
     { id: 2, title: "js", isDone: false },
     { id: 3, title: "html", isDone: true },
@@ -13,7 +13,7 @@ let task1 = [
 function App() {
     return (
         <div className="App">
-            <Todolist title='React' task={task1} />
+            <Todolist title='React' task={task} />
         </div >
     );
 }

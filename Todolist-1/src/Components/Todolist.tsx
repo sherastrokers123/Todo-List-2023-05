@@ -33,7 +33,6 @@ export function Todolist(props: TodolistPropsType) {
                     <input type="checkbox" checked={props.task[2].isDone} />
                     <span>{props.task[2].title}</span>
                 </li>
-
             </ul>
             <div>
                 <button>All</button>

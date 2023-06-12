@@ -1,0 +1,73 @@
+.App {
+  padding: 30px;
+  display: flex;
+}
+
+body{
+background: linear-gradient(90deg, #000000d9 ,#5a00a8, #000000, #007b8e, #000000, #ce6304,#0000006d);
+color: #fff;
+height: 100vh;
+animation: gradient 24s linear  infinite;
+background-size:500% 500%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+input{
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  margin-right: 4px;
+  background-color: #ffffff3c;
+  color: #fff;
+}
+
+input::placeholder{
+  color: rgba(250, 250, 250, 0.417);
+  padding-left: 10px;
+}
+
+
+.App > div {
+  margin-right: 50px;
+  margin: 0 auto;
+}
+
+
+li{
+  list-style: none;
+  margin-bottom: 3px;
+}
+li > button{
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  border: none ;
+  background-color: rgb(255, 255, 255);
+  color: rgb(99, 40, 105);
+transition:  .5s ease-in-out;
+font-weight: 800;
+}
+
+li button:hover{
+  background-color: rgba(255, 255, 255, 0.57);
+  color: #fff;
+}
+
+h1{
+  font-size: 40px;
+  color: #b9cfd3;
+}
