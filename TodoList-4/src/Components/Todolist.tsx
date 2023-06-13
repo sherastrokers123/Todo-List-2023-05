@@ -11,9 +11,10 @@ export type TaskType = {
 type TodolistPropsType = {
     title: string,
     tasks: TaskType[],
-    removeTask: (id: string) => void
+    removeTask: (id: string) => void,
     changeFilter: (value: FilterValuesType) => void,
-    addTask: (title: string) => void
+    addTask: (title: string) => void,
+    changeCheckboxStatus: (taskID: string, isDone: boolean) => void
 }
 
 export function Todolist(props: TodolistPropsType) {
@@ -29,9 +30,14 @@ export function Todolist(props: TodolistPropsType) {
             setNewTaskTitle("");
         }
     };
+
     const addTask = () => {
-        props.addTask(newTaskTitle);
-        setNewTaskTitle("");
+        if (newTaskTitle.trim() !== '') {
+            props.addTask(newTaskTitle.trim());
+            setNewTaskTitle("");
+        }
+
+
     };
     const onAllChangeFilterHandler = () => {
         props.changeFilter("All")
@@ -43,8 +49,6 @@ export function Todolist(props: TodolistPropsType) {
         props.changeFilter("Completed")
     };
 
-
-
     return (
         <div>
             <h1>{props.title}</h1>
@@ -53,6 +57,7 @@ export function Todolist(props: TodolistPropsType) {
                     value={newTaskTitle}
                     onChange={onNewTaskTitleChangeHandler}
                     onKeyDown={onNewTaskTitleOnKeyDown}
+                    className={"error"}
                 />
                 <button onClick={addTask}>+</button>
             </div>
@@ -66,7 +71,10 @@ export function Todolist(props: TodolistPropsType) {
                         return (
                             <li key={t.id}>
                                 <button onClick={onRemoveHandler}>X</button>
-                                <input type="checkbox" checked={t.isDone} />
+                                <input type="checkbox"
+                                    checked={t.isDone}
+                                    onChange={(e: ChangeEvent<HTMLInputElement>) => { props.changeCheckboxStatus(t.id, e.currentTarget.checked) }}
+                                />
                                 <span>{t.title}</span>
                             </li>
                         )

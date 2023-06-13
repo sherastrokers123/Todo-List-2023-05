@@ -19,34 +19,35 @@ function App() {
             ]
         )
 
-    let changeCheckboxStatus = (taskID: string) => {
+    //!checkbox
+    let changeCheckboxStatus = (taskID: string, isDone: boolean) => {
         let task = tasks.find((t) => {
-            if (t.id === taskID) {
-                return true
-            } else {
-                return false
-            }
-        })
-    }
+            return t.id === taskID;
+        });
+        if (task) {
+            return task.isDone = !task.isDone;
+        }
+        setTask([...tasks])
+    };
 
-    //Remove task
+
+    //!Remove task
 
     let removeTask = (id: string) => {
         tasks = tasks.filter((t) => {
             if (t.id !== id) {
-                return true
+                return true;
             } else {
-                return false
+                return false;
             }
         })
         setTask(tasks)
-    }
+    };
 
-    // Filtered tasks
+    //!Filtered tasks
 
     let [filter, setFilter] = useState<FilterValuesType>("All");
     let tasksForTdolist = tasks;
-
     if (filter === "Completed") {
         tasksForTdolist = tasks.filter((t) => {
             return t.isDone === true;
@@ -57,17 +58,15 @@ function App() {
             return t.isDone === false;
         })
     }
-
     let changeFilter = (value: FilterValuesType) => {
         setFilter(value);
-    }
+    };
 
-    // Add task
-
+    // !Add task
     let addTask = (title: string) => {
         let newTask = { id: v1(), title: title, isDone: false };
         let newTasks = [newTask, ...tasks];
-        setTask(newTasks)
+        setTask(newTasks);
     }
 
 
@@ -79,6 +78,7 @@ function App() {
                 removeTask={removeTask}
                 changeFilter={changeFilter}
                 addTask={addTask}
+                changeCheckboxStatus={changeCheckboxStatus}
             />
         </div >
     )
