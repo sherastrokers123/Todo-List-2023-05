@@ -17,7 +17,7 @@ export function Todolist(props: TodolistPropsType) {
         <div>
             <h3>{props.title}</h3>
             <div>
-                <input />
+                <input className="error" />
                 <button>+</button>
             </div>
             <ul>

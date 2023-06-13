@@ -1,8 +1,31 @@
+
+
 .App {
   padding: 30px;
-  display: flex;
+}
+ul{
+  list-style: none;
+}
+.App > div {
+  padding: 10px;
+  background-color: #fff;
+
 }
 
-.App > div {
-  margin-right: 50px;
+.error{
+  border:1px solid red;
+}
+
+.error-message {
+  color: red;
+}
+
+.active-filter{
+  background-color: #2441fb;
+  color: #fff;
+}
+
+.is-done{
+  opacity: .5;
+  background-color: #afff75;
 }

@@ -1,8 +1,9 @@
 
 import { useState } from 'react';
-import './App.css';
 import { Todolist, TaskType } from './Components/Todolist';
 import { v1 } from 'uuid';
+import React from 'react';
+import './App.css';
 
 export type FilterValuesType = "All" | "Active" | "Completed"
 
@@ -20,17 +21,15 @@ function App() {
         )
 
     //!checkbox
-    let changeCheckboxStatus = (taskID: string, isDone: boolean) => {
+    let changeStatusCheckbox = (taskID: string, isDone: boolean) => {
         let task = tasks.find((t) => {
-            return t.id === taskID;
-        });
+            return t.id === taskID
+        })
         if (task) {
-            return task.isDone = !task.isDone;
+            task.isDone = isDone
         }
         setTask([...tasks])
-    };
-
-
+    }
     //!Remove task
 
     let removeTask = (id: string) => {
@@ -78,7 +77,8 @@ function App() {
                 removeTask={removeTask}
                 changeFilter={changeFilter}
                 addTask={addTask}
-                changeCheckboxStatus={changeCheckboxStatus}
+                changeStatusCheckbox={changeStatusCheckbox}
+                filter={filter}
             />
         </div >
     )
