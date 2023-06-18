@@ -1,23 +1,60 @@
 
 
+body{
+	background: linear-gradient(90deg, #000000, #000000, #004364, #d56423,#000000);
+	background-size: 400% 400%;
+	animation: gradient 30s linear infinite;
+	transform: translate3d(0, 0, 0);
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 .App {
-  padding: 30px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 30px;
 }
 ul{
   list-style: none;
+  padding: 0;
 }
+
 .App > div {
-  padding: 10px;
-  background-color: #fff;
-
+  padding: 40px;
+  background-color: #ffffff51;
+  border-radius: 20px;
 }
 
+h1{
+  color: #ffffff;
+  font-size: 50px;
+  margin: 0;
+}
+input {
+  border-radius: 20px ;
+  border:none;
+}
 .error{
-  border:1px solid red;
+  border:1px solid rgb(255, 0, 0);
+  
 }
 
 .error-message {
-  color: red;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);  
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .active-filter{
@@ -27,5 +64,4 @@ ul{
 
 .is-done{
   opacity: .5;
-  background-color: #afff75;
 }

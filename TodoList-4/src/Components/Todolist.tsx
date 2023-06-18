@@ -32,7 +32,7 @@ export function Todolist(props: TodolistPropsType) {
             setNewTaskTitle("");
         }
         else {
-            setError("Title is required");
+            setError("Поле не может быт пустым");
         }
     };
 
