@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8740dd63-fcc0-4373-a654-ccaf22a285f5" name="Changes" comment="" />
+    <list default="true" id="8740dd63-fcc0-4373-a654-ccaf22a285f5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +29,10 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/alisher/Documents/Todo-List-2023-05",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "ts.external.directory.path": "/Users/alisher/Documents/Todo-List-2023-05/TodoList-1/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
@@ -38,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687793166784</updated>
       <workItem from="1687793167820" duration="173000" />
+      <workItem from="1689001599103" duration="4127000" />
     </task>
     <servers />
   </component>
